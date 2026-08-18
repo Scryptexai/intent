@@ -1,0 +1,40 @@
+# CATATAN: salin file ini ke .github/workflows/ci.yml untuk mengaktifkan CI.
+# Push dari sandbox ini tidak punya permission `workflows`; aktifkan manual
+# (atau beri token permission workflows). Lihat docs/PRODUCTION-READINESS.md B4.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Typecheck
+        run: npx tsc --noEmit
+
+      - name: Tests
+        run: npx vitest run
+
+      - name: Build
+        run: npm run build
+
+      # Gate regresi dependensi (B4). Critical = blocker; high = informational
+      # sampai backlog audit bersih.
+      - name: Audit (critical gate)
+        run: npm audit --audit-level=critical
+
+      - name: Audit (high, informational)
+        run: npm audit --audit-level=high || echo "::warning::npm audit high findings — lihat SECURITY.md residual risk"

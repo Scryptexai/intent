@@ -1,0 +1,25 @@
+import type { DictKey } from "./en";
+
+export const es: Partial<Record<DictKey, string>> = {
+  "nav.studio": "Estudio de Contenido",
+  "topbar.search": "Buscar proyectos, patrones, ejecutar acciones…",
+  "topbar.signin": "Entrar",
+  "common.skip": "Saltar al contenido",
+  "common.loadmore": "Cargar más",
+  "sentinel.sub": "Detección de anomalías en el universo monitoreado · umbral ±2σ vs media móvil de 30 días · escaneos cada 6 h · UI actualizada cada hora",
+  "origin.sub": "Credibilidad de actores y Matriz de Verdad Narrativa — quién habla, qué gana, y cuánto se adelanta la historia a la evidencia.",
+  "studio.title": "Estudio de Contenido",
+  "studio.sub": "Datos crudos → contenido viral respaldado por evidencia. Generado por IA, editado por usted.",
+  "studio.data": "Vista de datos",
+  "studio.editor": "Editor de borrador",
+  "pricing.title": "Precios",
+  "pricing.sub": "Se mide el alcance y la continuidad — nunca la profundidad de confianza. Citas y evidencia gratis para siempre.",
+  "pricing.trial": "Las cuentas nuevas incluyen 1 mes de Pro gratis.",
+  "pricing.month": "/mes",
+  "pricing.kyc": "Sin KYC — Pro se desbloquea automáticamente al detectar el pago.",
+  "billing.title": "Facturación",
+  "billing.trialEnds": "La prueba termina",
+  "billing.method.stripe": "Tarjeta (Stripe)",
+  "billing.method.paypal": "PayPal",
+  "billing.method.crypto": "USDT · cripto",
+};

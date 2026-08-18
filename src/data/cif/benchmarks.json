@@ -1,0 +1,70 @@
+[
+  {
+    "title": "Backtest 01 · Renzo ezETH LRT Depeg",
+    "type": "validation",
+    "category": "Restaking / LRT",
+    "given": [
+      "restaking",
+      "lrt",
+      "looping",
+      "liquid-restaking",
+      "airdrop",
+      "points"
+    ],
+    "expect": [
+      "P1",
+      "P2",
+      "P4"
+    ],
+    "outcome": "24 Apr 2024 — ezETH depeg ke ~$688 di Uniswap; >$65 juta liquidations (Morpho, Gearbox); pemicu = akhir window airdrop + likuiditas sekunder tipis + leverage looping unwinding + tokenomics REZ membingungkan (airdrop 5%); pulih cepat.",
+    "source": "CoinDesk / The Block / Protos / Cointelegraph (Apr 2024)",
+    "fired": [
+      "P1",
+      "P2",
+      "P4"
+    ],
+    "verdict": "PASS",
+    "recall": 1.0,
+    "missed": [],
+    "file": "examples/Benchmarks/cases/Backtest-01_Renzo-LRT-Depeg.md"
+  },
+  {
+    "title": "Backtest 02 · Helium Multi-token Simplification",
+    "type": "consistency",
+    "category": "DePIN",
+    "given": [
+      "depin",
+      "multi-token",
+      "mining"
+    ],
+    "expect": [
+      "P3"
+    ],
+    "outcome": "HIP-138 (awal 2025) — Helium menghentikan emisi IOT & MOBILE dan mengonsolidasikan seluruh tokenomics ke HNT tunggal; 18,2 miliar MOBILE dibakar.",
+    "source": "findas/IQ.wiki (Helium's own profile, `examples/Pioneer/Helium.md`, was moved to",
+    "fired": [
+      "P3"
+    ],
+    "verdict": "PASS",
+    "recall": 1.0,
+    "missed": [],
+    "file": "examples/Benchmarks/cases/Backtest-02_Helium-MultiToken.md"
+  },
+  {
+    "title": "Backtest 03 · Oracle Infra (negative control)",
+    "type": "control",
+    "category": "Oracle",
+    "given": [
+      "oracle",
+      "infra"
+    ],
+    "expect": [],
+    "outcome": "Proyek oracle/infra murni tanpa airdrop-farm, restaking, atau multi-token TIDAK boleh memicu pola kegagalan (P1–P5). Menguji harness tidak \"over-fire\".",
+    "source": "synthetic control",
+    "fired": [],
+    "verdict": "PASS",
+    "recall": 1.0,
+    "missed": [],
+    "file": "examples/Benchmarks/cases/Backtest-03_Oracle-Control.md"
+  }
+]
