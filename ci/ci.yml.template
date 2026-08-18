@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Unit tests
+        run: npm test
+      - name: Dependency audit gate (no critical/high)
+        run: |
+          if npm audit --audit-level=high --omit=dev 2>/dev/null | grep -q "critical\|high"; then
+            echo "::error::npm audit found high/critical vulnerabilities"
+            exit 1
+          fi
+      - name: Production build
+        run: npm run build

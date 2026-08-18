@@ -1,0 +1,94 @@
+{
+  "Arbitrum": {
+    "projectSlug": "arbitrum",
+    "total": 81.6,
+    "dimensions": [
+      {
+        "key": "research",
+        "label": "Research Quality",
+        "score": 100.0,
+        "weight": 25,
+        "description": "Complete Phases: 10 dari 10 · Score: (10/10) × 100 = 100"
+      },
+      {
+        "key": "consistency",
+        "label": "Consistency",
+        "score": 100.0,
+        "weight": 20,
+        "description": "Passed Checks: 7 dari 7 · Score: (7/7) × 100 = 100"
+      },
+      {
+        "key": "evidence",
+        "label": "Evidence",
+        "score": 90.0,
+        "weight": 15,
+        "description": "Average Evidence Weight (0-100): 90"
+      },
+      {
+        "key": "coverage",
+        "label": "Coverage",
+        "score": 38.0,
+        "weight": 15,
+        "description": "Overall Coverage (%): 38% · Score: 38"
+      },
+      {
+        "key": "conflict",
+        "label": "Conflict",
+        "score": 56.0,
+        "weight": 15,
+        "description": "Conflict Score (%): 56%"
+      },
+      {
+        "key": "knowledge",
+        "label": "Knowledge",
+        "score": 90.2,
+        "weight": 10,
+        "description": "Average Confidence Score: 90.2"
+      }
+    ],
+    "phases": [
+      {
+        "name": "Phase 2 — Entity",
+        "status": "Passed",
+        "score": 22,
+        "owner": "CIF"
+      },
+      {
+        "name": "Phase 3 — Event",
+        "status": "Passed",
+        "score": 42,
+        "owner": "CIF"
+      },
+      {
+        "name": "Phase 4 — Technology",
+        "status": "Passed",
+        "score": 50,
+        "owner": "CIF"
+      },
+      {
+        "name": "Phase 5 — Financial",
+        "status": "Passed",
+        "score": 78,
+        "owner": "CIF"
+      },
+      {
+        "name": "Phase 6 — Token",
+        "status": "Passed",
+        "score": 80,
+        "owner": "CIF"
+      },
+      {
+        "name": "Phase 7 — Ecosystem",
+        "status": "Passed",
+        "score": 73,
+        "owner": "CIF"
+      },
+      {
+        "name": "Phase 8 — Market",
+        "status": "Passed",
+        "score": 90,
+        "owner": "CIF"
+      }
+    ]
+  }
+}

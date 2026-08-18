@@ -1,0 +1,7 @@
+{
+  "crons": [
+    { "path": "/api/sentinel/run", "schedule": "0 */6 * * *" },
+    { "path": "/api/narratives/refresh", "schedule": "0 3 * * *" },
+    { "path": "/api/billing/watcher", "schedule": "*/5 * * * *" }
+  ]
+}
