@@ -171,7 +171,10 @@ export function BriefClient({ slug }: { slug: string }) {
               <span className={cn("text-[11px]", c.thesis === "strengthens" ? "text-intent-lime" : c.thesis === "weakens" ? "text-intent-rose" : "text-muted-foreground")}>
                 {t(`brief.impact.${c.thesis}` as DictKey)}
               </span>
-              <span className="mono w-full text-[10px] text-muted-foreground">{c.asOf.slice(0, 10)} · {c.source}</span>
+              <span className="mono w-full text-[10px] text-muted-foreground">
+                {c.asOf.slice(0, 10)} · {c.source}
+                {c.confidenceImpact !== 0 && <> · {t("brief.conf")} {c.confidenceImpact > 0 ? "+" : ""}{c.confidenceImpact.toFixed(2)}</>}
+              </span>
               {c.note && <span className="w-full border-l-2 border-intent-gold/40 pl-2 text-[11px] leading-relaxed text-foreground/80">{c.note}</span>}
             </div>
           ))}
@@ -220,6 +223,11 @@ export function BriefClient({ slug }: { slug: string }) {
                 <p className="mt-2 text-muted-foreground"><span className="text-foreground/80">{t("brief.analogs.struct")}:</span> {a.structural}</p>
                 <p className="mt-1.5 text-muted-foreground"><span className="text-foreground/80">{t("brief.analogs.mismatch")}:</span> {a.mismatch}</p>
                 <p className="mt-1.5 text-muted-foreground"><span className="text-foreground/80">{t("brief.analogs.context")}:</span> {a.context}</p>
+                {a.sequence.length > 0 && (
+                  <p className="mt-1.5 text-muted-foreground">
+                    <span className="text-foreground/80">{t("brief.analogs.seq")}:</span> {a.sequence.join(" → ")}
+                  </p>
+                )}
                 <p className="mt-1.5 text-muted-foreground"><span className="text-foreground/80">{t("brief.analogs.outcome")}:</span> {a.outcome}</p>
                 <p className="mt-1.5 text-intent-teal/90">{t("brief.analogs.relevance")}: {a.relevance}</p>
               </Link>
@@ -231,11 +239,15 @@ export function BriefClient({ slug }: { slug: string }) {
       {/* ── 6: Red team (premium, setara visual tesis) ── */}
       {showInterpretation && (
         <Card className="mt-4 border-intent-rose/25">
-          <CardHeader className="pb-3"><CardTitle className="flex items-center gap-2 text-sm"><ShieldAlert className="h-4 w-4 text-intent-rose" /> {t("brief.redteam.title")}</CardTitle></CardHeader>
+          <CardHeader className="pb-3">
+            <CardTitle className="flex items-center gap-2 text-sm"><ShieldAlert className="h-4 w-4 text-intent-rose" /> {t("brief.redteam.title")}</CardTitle>
+            <p className="mt-1 text-[10px] text-muted-foreground">{t("brief.redteam.dep")}</p>
+          </CardHeader>
           <CardContent className="grid gap-4 p-6 pt-0 md:grid-cols-2">
             <ul className="space-y-1.5 text-xs text-muted-foreground">
               {pb.redTeam.risks.map((r) => <li key={r}>· {r}</li>)}
               {pb.redTeam.conflicts.map((c) => <li key={c} className="text-intent-rose/80">· {c}</li>)}
+              {pb.redTeam.dependencies.map((d) => <li key={d} className="text-amber-300/80">· {d}</li>)}
             </ul>
             <ul className="space-y-1.5 border-l border-white/[0.06] pl-4 text-xs text-muted-foreground">
               {pb.redTeam.dissent.map((d) => <li key={d}>· {d}</li>)}

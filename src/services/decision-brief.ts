@@ -24,6 +24,7 @@ export interface ChangedItem {
   direction: "up" | "down" | "flat";
   deviation: number;
   thesis: ThesisImpact;
+  confidenceImpact: number;
   note?: string;
 }
 export interface LedgerItem {
@@ -42,6 +43,7 @@ export interface AnalogItem {
   structural: string;
   mismatch: string;
   context: string;
+  sequence: string[];
   outcome: string;
   relevance: string;
 }
@@ -53,7 +55,7 @@ export interface PremiumBrief {
   ledger: LedgerItem[];
   unknowns: string[];
   analogs: AnalogItem[];
-  redTeam: { risks: string[]; dissent: string[]; conflicts: string[] };
+  redTeam: { risks: string[]; dissent: string[]; conflicts: string[]; dependencies: string[] };
   gates: { watch: string[]; invalidation: string[]; next: string; reviewDate: string; seek: string[] };
 }
 
@@ -102,6 +104,7 @@ export async function buildPremiumBrief(project: ProjectRow): Promise<PremiumBri
       direction: m30 > 0.02 ? "up" : m30 < -0.02 ? "down" : "flat",
       deviation: Math.round(m30 * 1000) / 10,
       thesis: m30 > 0.05 ? "strengthens" : m30 < -0.05 ? "weakens" : "neutral",
+      confidenceImpact: Math.round((m30 > 0.05 ? 0.1 : m30 < -0.05 ? -0.1 : 0) * 100) / 100,
     },
     {
       asOf,
@@ -110,6 +113,7 @@ export async function buildPremiumBrief(project: ProjectRow): Promise<PremiumBri
       direction: vol30 > 0.05 ? "up" : vol30 < -0.05 ? "down" : "flat",
       deviation: Math.round(vol30 * 1000) / 10,
       thesis: Math.abs(vol30) > 0.2 ? (project.sentiment >= 0 ? "strengthens" : "weakens") : "neutral",
+      confidenceImpact: Math.abs(vol30) > 0.2 ? (project.sentiment >= 0 ? 0.05 : -0.05) : 0,
     },
     ...radar.slice(0, 3).map<ChangedItem>((r) => ({
       asOf,
@@ -118,6 +122,7 @@ export async function buildPremiumBrief(project: ProjectRow): Promise<PremiumBri
       direction: r.severity >= 0.5 ? "up" : "down",
       deviation: Math.round(r.severity * 100) / 100,
       thesis: r.kind.includes("div") || r.kind.includes("unlock") ? "weakens" : "strengthens",
+      confidenceImpact: (r.kind.includes("div") || r.kind.includes("unlock") ? -1 : 1) * Math.round(r.severity * 10) / 100,
     })),
   ];
 
@@ -142,6 +147,11 @@ export async function buildPremiumBrief(project: ProjectRow): Promise<PremiumBri
   if (hot.length === 0) unknowns.push("No dominant historical pattern active — analogical confidence is low by design.");
 
   // ── 5. Historical analogs (struktural + mismatch + konteks + hasil) ──
+  const ds = await getCifDataset();
+  const seqFor = (name: string): string[] => {
+    const key = Object.keys(ds?.decisionEvents ?? {}).find((k) => k.toLowerCase() === name.toLowerCase());
+    return ((key ? ds?.decisionEvents?.[key] : undefined) ?? []).slice(0, 3).map((e) => e.title);
+  };
   let analogs: AnalogItem[] = [];
   try {
     analogs = findAnalogProject(project.id, 3).analogs.map((a) => {
@@ -162,6 +172,7 @@ export async function buildPremiumBrief(project: ProjectRow): Promise<PremiumBri
         structural: a.rationale,
         mismatch,
         context: `Analog observed with sentiment ${a.project.sentiment.toFixed(2)} and ${(mA * 100).toFixed(0)}% 30d momentum.`,
+        sequence: seqFor(a.project.name),
         outcome: hotA ? `Dominant pattern then: ${hotA.p.name} (activation ${hotA.x.toFixed(2)}).` : "No dominant pattern recorded for the analog.",
         relevance:
           a.similarity >= 0.7
@@ -188,6 +199,11 @@ export async function buildPremiumBrief(project: ProjectRow): Promise<PremiumBri
   if (counter) dissent.push(`Alternative read: ${counter.p.name} is sub-threshold but rising — the bear case is not dead, only quiet.`);
   dissent.push("Interpretation bias: the dominant pattern matches the current narrative; base-rate neglect is the usual failure mode here.");
   if (conflicts.length > 0) dissent.push("Source disagreement exists in the dossier — the ledger flags it per claim; do not average it away.");
+
+  const deps = ((cif?.entities ?? []) as { name?: string; type?: string }[])
+    .filter((e) => /investor|fund|vc|capital|partner/i.test(e.type ?? ""))
+    .slice(0, 3)
+    .map((e) => `Funding/counterparty concentration: ${e.name} (${e.type}) — dependency risk if incentives shift.`);
 
   // ── 7. Decision gates ──
   const watch = [...radar.map((r) => r.title), ...hot.slice(0, 2).map((h) => `${h.p.name} activation trend (weekly)`)];
@@ -227,5 +243,5 @@ export async function buildPremiumBrief(project: ProjectRow): Promise<PremiumBri
     if (ex.changedNote && changed[0]) changed[0] = { ...changed[0], note: ex.changedNote } as (typeof changed)[number];
   }
 
-  return { asOf, decision, read: { conclusion, evidenceQuality, patternConfidence: pc, trajectoryUncertainty }, changed, ledger, unknowns, analogs, redTeam: { risks, dissent, conflicts: conflicts.slice(0, 3).map((c) => `${c.topic ?? "conflict"}: ${c.a ?? ""} vs ${c.b ?? ""}`) }, gates };
+  return { asOf, decision, read: { conclusion, evidenceQuality, patternConfidence: pc, trajectoryUncertainty }, changed, ledger, unknowns, analogs, redTeam: { risks, dissent, conflicts: conflicts.slice(0, 3).map((c) => `${c.topic ?? "conflict"}: ${c.a ?? ""} vs ${c.b ?? ""}`), dependencies: deps }, gates };
 }

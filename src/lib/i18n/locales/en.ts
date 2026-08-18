@@ -338,6 +338,10 @@ export const en = {
   "search.g.entity": "Entities",
   "search.g.narrative": "Narratives",
   "search.g.knowledge": "Knowledge",
+
+  "brief.conf": "confidence impact",
+  "brief.analogs.seq": "Decision sequence then",
+  "brief.redteam.dep": "Risks, dissent, conflicts & dependencies — INTENT is not selling conviction.",
 } as const;
 
 export type DictKey = keyof typeof en;

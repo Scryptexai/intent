@@ -341,4 +341,8 @@ export const id: Record<DictKey, string> = {
   "search.g.entity": "Entitas",
   "search.g.narrative": "Narrative",
   "search.g.knowledge": "Knowledge",
+
+  "brief.conf": "dampak keyakinan",
+  "brief.analogs.seq": "Urutan decision saat itu",
+  "brief.redteam.dep": "Risiko, dissent, konflik & ketergantungan — INTENT tidak menjual keyakinan.",
 };
