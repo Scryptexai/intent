@@ -25,7 +25,7 @@ fitur trust-UI (blueprint §3) dan permukaan enterprise.
 
 ### 2.1 Consumer (closing loop blueprint)
 - **Trust UI §3 penuh**: panel sitasi satu-klik per claim (data `evidenceText` sudah ada, UI belum expandable), badge Evidence Level HIGH/MED/LOW per fakta, halaman **Track Record publik** (3 backtest sudah ada di `benchmarks`) + **calibration store** untuk live calls (tabel baru `calibration_calls`).
-- **Search global**: cmdk saat ini navigasi + 4 aksi; perlu typeahead lintas katalog (proyek/pattern/entitas/narrative) dengan deep-link.
+- **Search global**: **DONE (2026-08-17)** — typeahead lintas katalog (proyek/pattern/decision/entity/narrative/knowledge) dengan deep-link bermakna (project→/brief, decision→/multiverse, entity/knowledge→dossier, pattern→brief analog) + palette grouping ber-ikon & i18n.
 - **Notifikasi**: email/webhook untuk Sentinel alert & watchlist trigger (aturan alert sudah ada di `watchlists.alert_triggers`).
 - **Studio kolaboratif**: komentar/approval draft, penjadwalan post, **OAuth X/LinkedIn nyata** (UI placeholder ada), analitik share (klik/impresi per Truth Card via token).
 - **Export**: due-diligence memo PDF, CSV untuk tabel POV/entities, batch Truth Cards.

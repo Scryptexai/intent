@@ -326,6 +326,18 @@ export const en = {
 
   // ── Framing A/B discovery ──
   "framing.confident": "Make confident decisions.",
+
+  // ── Global search ──
+  "search.placeholder": "Search projects, patterns, entities, narratives… (Esc to close)",
+  "search.empty": "No results in the monitored universe.",
+  "search.modules": "Modules",
+  "search.actions": "Quick actions",
+  "search.g.project": "Projects",
+  "search.g.pattern": "Patterns",
+  "search.g.decision": "Decision events",
+  "search.g.entity": "Entities",
+  "search.g.narrative": "Narratives",
+  "search.g.knowledge": "Knowledge",
 } as const;
 
 export type DictKey = keyof typeof en;

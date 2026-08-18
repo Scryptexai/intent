@@ -329,4 +329,16 @@ export const id: Record<DictKey, string> = {
 
   // ── Framing A/B discovery ──
   "framing.confident": "Ambil keputusan dengan yakin.",
+
+  // ── Global search ──
+  "search.placeholder": "Cari proyek, pattern, entitas, narrative… (Esc untuk tutup)",
+  "search.empty": "Tidak ada hasil di universe yang dipantau.",
+  "search.modules": "Modul",
+  "search.actions": "Aksi cepat",
+  "search.g.project": "Proyek",
+  "search.g.pattern": "Pattern",
+  "search.g.decision": "Decision events",
+  "search.g.entity": "Entitas",
+  "search.g.narrative": "Narrative",
+  "search.g.knowledge": "Knowledge",
 };

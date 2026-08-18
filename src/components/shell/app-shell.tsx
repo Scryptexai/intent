@@ -21,6 +21,10 @@ import {
   Globe,
   Trophy,
   Gem,
+  Bitcoin,
+  Flame,
+  Newspaper,
+  BookOpen,
 } from "lucide-react";
 import { NAV, NAV_GROUPS } from "@/components/shell/nav";
 import { PlanProvider, usePlan } from "@/components/shell/plan-context";
@@ -112,7 +116,26 @@ function Sidebar() {
   );
 }
 
+const SEARCH_ORDER = ["project", "pattern", "decision", "entity", "narrative", "knowledge"] as const;
+const SEARCH_GROUP_KEY: Record<(typeof SEARCH_ORDER)[number], import("@/lib/i18n/locales/en").DictKey> = {
+  project: "search.g.project",
+  pattern: "search.g.pattern",
+  decision: "search.g.decision",
+  entity: "search.g.entity",
+  narrative: "search.g.narrative",
+  knowledge: "search.g.knowledge",
+};
+const SEARCH_ICON: Record<string, React.ComponentType<{ className?: string }>> = {
+  project: Bitcoin,
+  pattern: Flame,
+  decision: GitBranch,
+  entity: Fingerprint,
+  narrative: Newspaper,
+  knowledge: BookOpen,
+};
+
 function CommandPalette({ open, setOpen }: { open: boolean; setOpen: (v: boolean) => void }) {
+  const { t } = useI18n();
   const router = useRouter();
   const [q, setQ] = useState("");
   const [hits, setHits] = useState<{ type: string; label: string; sub: string; href: string }[]>([]);
@@ -143,23 +166,26 @@ function CommandPalette({ open, setOpen }: { open: boolean; setOpen: (v: boolean
             <Command.Input
               value={q}
               onValueChange={setQ}
-              placeholder="Search projects, patterns, entities, narratives…  (Esc to close)"
+              placeholder={t("search.placeholder")}
               className="h-12 w-full border-b border-white/10 bg-transparent px-4 text-sm outline-none placeholder:text-muted-foreground"
             />
             <Command.List className="max-h-80 overflow-y-auto p-2">
-              <Command.Empty className="py-6 text-center text-sm text-muted-foreground">No results.</Command.Empty>
-              {hits.length > 0 && (
-                <Command.Group heading="Catalog">
-                  {hits.map((h) => (
-                    <Command.Item key={`${h.type}-${h.label}`} value={`${h.type} ${h.label} ${h.sub}`} onSelect={() => run(() => router.push(h.href))} className={paletteItem}>
-                      <span className="mono w-16 shrink-0 text-[9px] uppercase text-intent-gold">{h.type}</span>
-                      <span className="truncate">{h.label}</span>
-                      <span className="ml-auto truncate text-xs text-muted-foreground">{h.sub}</span>
-                    </Command.Item>
-                  ))}
-                </Command.Group>
-              )}
-              <Command.Group heading="Modules">
+              <Command.Empty className="py-6 text-center text-sm text-muted-foreground">{t("search.empty")}</Command.Empty>
+              {SEARCH_ORDER.filter((tp) => hits.some((h) => h.type === tp)).map((tp) => {
+                const Icon = SEARCH_ICON[tp];
+                return (
+                  <Command.Group key={tp} heading={t(SEARCH_GROUP_KEY[tp])}>
+                    {hits.filter((h) => h.type === tp).map((h) => (
+                      <Command.Item key={`${h.type}-${h.label}`} value={`${h.type} ${h.label} ${h.sub}`} onSelect={() => run(() => router.push(h.href))} className={paletteItem}>
+                        <Icon className="h-4 w-4 shrink-0 text-intent-teal" />
+                        <span className="truncate">{h.label}</span>
+                        <span className="ml-auto truncate text-xs text-muted-foreground">{h.sub}</span>
+                      </Command.Item>
+                    ))}
+                  </Command.Group>
+                );
+              })}
+              <Command.Group heading={t("search.modules")}>
                 {NAV.map((n) => (
                   <Command.Item key={n.href} value={`${n.label} ${n.sub}`} onSelect={() => run(() => router.push(n.href))} className={paletteItem}>
                     <span>{n.label}</span>
@@ -167,7 +193,7 @@ function CommandPalette({ open, setOpen }: { open: boolean; setOpen: (v: boolean
                   </Command.Item>
                 ))}
               </Command.Group>
-              <Command.Group heading="Quick actions">
+              <Command.Group heading={t("search.actions")}>
                 <Command.Item value="run sentinel scan now" onSelect={() => run(() => void fetch("/api/sentinel/run", { method: "POST" }).then(() => router.push("/")))} className={paletteItem}>
                   <PlayCircle className="h-4 w-4 text-intent-gold" /> Run Sentinel scan now
                 </Command.Item>
