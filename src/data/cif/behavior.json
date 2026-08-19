@@ -1,0 +1,441 @@
+{
+  "Arbitrum": {
+    "projectSlug": "arbitrum",
+    "strategicObjectives": [
+      "Menjadi infrastruktur keuangan-native untuk ekonomi terprogram",
+      "Desentralisasi progresif melalui DAO",
+      "Membangun \"digital sovereign nation\""
+    ],
+    "decisionPatterns": [
+      "Selective Strategic Partnerships dengan High-Impact Projects",
+      "Institutional Adoption sebagai Prioritas",
+      "Gaming sebagai Vertical Strategis",
+      "Developer Ecosystem sebagai Prioritas",
+      "\"Builder Retention Over Builder Attraction\"",
+      "\"Patient, Long-Term\" Approach",
+      "\"Institutional-First\" Strategy",
+      "\"Ethereum Alignment\" sebagai Prinsip",
+      "\"Revenue Before Hype\"",
+      "\"Build, Then Token\"",
+      "Token-Weighted Voting dengan Quorum",
+      "Two-Governor System (Core + Treasury)",
+      "Progressive Desentralisasi melalui Pemilihan",
+      "Learning from Failure (AIP-1)",
+      "Concentration of Voting Power sebagai Tantangan",
+      "Ethereum Alignment First",
+      "Upgrade Bertahap dengan Pengujian Ekstensif",
+      "Customizability untuk Ecosystem Expansion",
+      "Multi-Language Developer Accessibility",
+      "Progressive Decentralization Teknis",
+      "Pendanaan Bertahap dengan Valuasi Meningkat",
+      "Treasury sebagai Revenue Engine, Bukan Cost Center",
+      "Disiplin dan Konservatif dalam Pengeluaran",
+      "Diversifikasi Aset Treasury",
+      "Revenue Sharing sebagai Model Bisnis"
+    ],
+    "riskResponse": [
+      "Emergency Intervention oleh Security Council",
+      "Governance Response untuk Unfreeze",
+      "Proactive Security melalui Audit Subsidies",
+      "Do Nothing as Default",
+      "Transparansi Pasca-Incident"
+    ],
+    "tradeOffs": [
+      "Desentralisasi vs Keamanan",
+      "Growth vs Sustainability",
+      "Desentralisasi Progresif vs Efisiensi",
+      "Ecosystem Expansion vs Revenue Capture",
+      "Token Utility vs Governance Focus"
+    ]
+  },
+  "Blast": {
+    "projectSlug": "blast",
+    "strategicObjectives": [
+      "Membangun Ethereum L2 yang mendiferensiasi diri melalui native yield otomatis",
+      "Memanfaatkan basis pengguna dan likuiditas Blur untuk bootstrap ekosistem",
+      "Menciptakan flywheel insentif via Points (user) dan Gold (builder) untuk menarik TVL dan aktivitas",
+      "Menjaga kendali teknis dan governance melalui Foundation terpusat di tahap awal"
+    ],
+    "decisionPatterns": [
+      "Blur integration sebagai bootstrap catalyst, bukan long-term dependency",
+      "Core DeFi trio (Thruster, Ring, Wasabi) sebagai anchor protocols day-1 mainnet",
+      "Third-party bridges (LayerZero, Wormhole, Hyperlane, Orbiter) untuk generic messaging",
+      "Kaito partnership untuk InfoFi/social analytics narrative expansion",
+      "CEX listings priority: Binance, Bybit, OKX, Gate.io (no Coinbase/Kraken at TGE)",
+      "Developer tooling: Foundry-first, Hardhat support, custom SDK",
+      "Gold program sebagai primary business development tool",
+      "Pragmatic centralized launch → incremental decentralization signaling tanpa timeline konkret",
+      "Token incentives sebagai primary growth lever, bukan product differentiation saja",
+      "Opacity pada critical financial/token parameters (vesting, treasury, yield retention, audit reports)",
+      "Leverage Blur relationship untuk bootstrap, tapi maintain separate entity",
+      "Foundation unilateral decision-making pada protocol upgrades",
+      "Third-party dependency untuk non-core infrastructure (bridges, messaging, RPC, indexing)",
+      "Narrative-driven development (native yield → Points → Gold → governance → staking → fee payment)",
+      "No public incident response / post-mortem culture (no exploits/incidents reported)",
+      "Foundation-first, DAO-second approach",
+      "Token-weighted voting (1 BLAST = 1 vote) dengan delegation",
+      "No council, committee, atau security board formal structure (per cutoff)",
+      "Proposal threshold, quorum, timelock tidak dipublikasikan",
+      "v1.1 upgrade dieksekusi Foundation tanpa governance vote (Nov 2024)",
+      "Geographic restrictions pada TGE claim (US persons excluded)",
+      "Memilih OP Stack fault proof components tapi custom execution/sequencer/yield layer",
+      "Centralized sequencer sebagai pragmatic choice untuk time-to-market",
+      "Permissioned proposer/challenger sebagai interim security model",
+      "Native yield via precompile rebasing bukan ERC-4626 vault",
+      "EIP-4844 blob adoption rolling post-Dencun (Mar 2024 onward)",
+      "Execution client (blast-geth) tidak open source",
+      "No native account abstraction (ERC-4337 via EntryPoint only)",
+      "Strategic funding round dari Paradigm + Standard Crypto tanpa public disclosure detail (Nov 2023)",
+      "Treasury opacity: no public dashboard, addresses, atau composition (2023-present)",
+      "Revenue model: sequencer priority fees + potential native yield retention (undisclosed rate)",
+      "Token incentives sebagai primary growth capital (Points 25.5% + Gold 28% = 53.5% supply)",
+      "No buyback, burn, atau fee switch mechanism di tokenomics (TGE Jun 2024)",
+      "Vesting schedules undisclosed untuk 74.5% non-community allocation",
+      "Gold program sebagai ongoing emission mechanism (28% supply over multi-year)"
+    ],
+    "riskResponse": [
+      "Single sequencer centralization risk → No public mitigation roadmap",
+      "Permissioned proposer/challenger → No permissionless challenge game timeline",
+      "L1 yield source concentration (Lido + MakerDAO) → No diversification announced",
+      "Oracle dependency (Chainlink) → No fallback oracle atau TWAP on-chain",
+      "Upgrade key centralization (Foundation multisig) → No timelock, no on-chain governance execution",
+      "Bridge 7-day withdrawal delay → No fast withdrawal mechanism native",
+      "Execution client closed source → No independent verification possible",
+      "Regulatory risk (Cayman + US persons) → Geographic restrictions only, no legal opinion public",
+      "Audit transparency → Reports tidak dipublikasikan",
+      "TVL decline post-Points Season 1 ($1.48B → ~$400M) → Gold program continuation"
+    ],
+    "tradeOffs": [
+      "Decentralization vs Time-to-Market & Performance",
+      "Security (Trust-minimized) vs Usability (Fast Withdrawals)",
+      "Native Yield Differentiation vs Protocol Dependency Concentration",
+      "Token Incentive Growth vs Sustainable Tokenomics",
+      "Foundation Control vs DAO Governance Credibility",
+      "Transparency vs Strategic Opacity",
+      "EVM Equivalence vs Custom Innovation (Native Yield Precompile)",
+      "Closed Source Execution Client vs Open Source Ethos"
+    ]
+  },
+  "Aave": {
+    "projectSlug": "aave",
+    "strategicObjectives": [
+      "Menjadi infrastruktur likuiditas terdesentralisasi terdepan untuk ekonomi on-chain",
+      "Mendekentralisasikan kendali protokol melalui Aave DAO secara progresif",
+      "Membangun stablecoin native (GHO) sebagai lapisan pembayaran dan yield terdesentralisasi",
+      "Menjangkau pasar institusional melalui produk permissioned (Arc) dan RWA (Horizon)",
+      "Mengamankan posisi pasar melalui arsitektur modular, verifikasi formal, dan standar keamanan berlapis"
+    ],
+    "decisionPatterns": [
+      "Ekspansi Multi-Chain Terstruktur: L2/Alternative L1 dengan Insentif Ekosistem",
+      "Kemitraan Oracle & Cross-Chain Infrastructure Eksklusif dengan Chainlink",
+      "Institutional Adoption via Permissioned Products (Arc, Horizon) dan White-Label",
+      "Developer Ecosystem Support via Grants, SDK, dan Address Book",
+      "Wallet & Frontend Integration Strategis (MetaMask, Aave Pro, Mobile App)",
+      "Major Upgrade Setelah Periode Konsolidasi dan Learnings dari Versi Sebelumnya",
+      "Ekspansi Chain Baru Disertai Program Insentif Likuiditas Besar",
+      "Mengadopsi Standar Industri (Chainlink, CCIP, ERC) Daripada Build Sendiri",
+      "Progresif Desentralisasi via Token-Weighted Voting dan Delegation",
+      "Governance Conflict Resolution via Large-Scale Proposal (Aave Will Win)",
+      "Delegate Compensation dan Accountability Framework",
+      "Service Provider Accountability via DAO Funding Proposals",
+      "Business Source License Protection via Governance",
+      "Upgrade Bertahap dengan Backward Compatibility dan Migration Path",
+      "Modular Architecture untuk Risk Isolation dan Upgradeability",
+      "Security-First Development dengan Formal Verification dari Tahap Desain",
+      "Standarisasi Infrastruktur Cross-Chain via Chainlink CCIP",
+      "Development Framework Migration ke Foundry untuk Performance dan Tooling Modern",
+      "Fundraising Bertahap: Token Sale → Private Investment → Series VC → DAO Treasury Self-Sustain",
+      "Treasury Management: Diversifikasi Aset dengan Dominasi ETH & Stablecoin",
+      "Revenue Diversification: Lending Fees + Swap Fees + App Fees + GHO Revenue + Chainlink SVR",
+      "Buyback Program dari Protocol Revenue untuk Token Holder Value Accrual",
+      "Emergency Funding dari DAO Treasury saat Krises"
+    ],
+    "riskResponse": [
+      "Emergency Multi-Party Response ke Exploit Bridge/Collateral",
+      "Proaktif Sunsetting Versi Lama via Governance untuk Risk Reduction",
+      "Security Program Eskalasi Berdasarkan Threat Model Evolution",
+      "Market Crash Response: Liquidity Preservation dan Parameter Adjustment",
+      "Regulatory Risk Mitigation via Institutional Products dan Legal Entities"
+    ],
+    "tradeOffs": []
+  },
+  "Bancor": {
+    "projectSlug": "bancor",
+    "strategicObjectives": [
+      "Menjadi protokol AMM dengan single-sided staking dan proteksi impermanent loss terdepan",
+      "Menciptakan tokenomics deflationary melalui mekanisme buyback-and-burn (Vortex)",
+      "Desentralisasi progresif melalui BancorDAO dengan kendali parameter on-chain",
+      "Ekspansi multi-chain selektif dengan fokus Ethereum dan Arbitrum untuk skalabilitas",
+      "Membangun ekosistem developer melalui SDK, subgraph, dan dokumentasi terbuka"
+    ],
+    "decisionPatterns": [
+      "Integrasi Infrastruktur Kritis Hanya Dengan Provider Terpercaya Ternama (Chainlink, The Graph, OpenZeppelin, Arbitrum)",
+      "Ekspansi Multi-Chain Selektif — Hanya Deploy V3 di Ethereum + Arbitrum",
+      "Partnership Aset Produktif (LST) Via Governance Whitelisting",
+      "Listing CEX Major (Binance, Coinbase, Kraken) Sebagai Likuiditas Sekunder & On-Ramp",
+      "Developer Ecosystem Dibangun Via SDK + Subgraph + Open Source",
+      "Desentralisasi Bertahap — Foundation → DAO Parameter Control → DAO Upgrade Authority",
+      "Voting Power = BNT + stBNT (Infinity Staking Receipt Token)",
+      "Off-Chain Signaling (Snapshot) → On-Chain Execution (Timelock 48h)",
+      "Parameter Ekonomis Dinamis Dikontrol DAO (Fee, Vortex Split, Whitelist)",
+      "Security Council / Emergency Multisig Implisit Via Timelock Signers",
+      "Arsitektur Upgrade Fundamental Setiap Generasi (V1→V2→V3)",
+      "Keamanan Sebagai Prioritas Absolut Pasca-Eksploit 2020",
+      "Oracle Tunggal (Chainlink) Tanpa Fallback",
+      "Bridge Kanonik Saja (Arbitrum Bridge) untuk Cross-Chain",
+      "Upgradeable Proxy (UUPS/Transparent) Dikontrol DAO Timelock",
+      "Single-Sided Staking Sebagai Diferensiasi Teknis Utama",
+      "Satu Ronde Fundraising Besar (ICO $153M) Tanpa Equity Pasca-ICO",
+      "Treasury Opacity — Tidak Ada Transparency Report",
+      "Revenue Model Berbagi Fee Protocol ke Staker (Fee Switch On Sejak V3)",
+      "Tokenomics Shift dari Inflationary ke Deflationary Via Governance",
+      "Tidak Ada Pinjaman/Leverage Protocol — Operating dari Treasury & Fees"
+    ],
+    "riskResponse": [
+      "Respons Darurat Eksploit 2020 — Patch, Negosiasi, Audit, Redesign Arsitektur Keamanan",
+      "Respons Tekanan Jual Inflasi BNT — Redesign Tokenomics ke Deflationary (Vortex)",
+      "Respons Gas Ethereum Tinggi — Deploy Arbitrum L2 untuk V3",
+      "Respons Regulatory (Swiss Foundation) — Legal Wrapper, Compliance, No US Persons di ICO",
+      "Respons Bear Market / Low Volume — Parameter Fee & Vortex Adjustment Via DAO"
+    ],
+    "tradeOffs": []
+  },
+  "Axie Infinity": {
+    "projectSlug": "axie-infinity",
+    "strategicObjectives": [
+      "Membangun ekosistem gaming blockchain mandiri melalui appchain Ronin",
+      "Menciptakan ekonomi play-to-earn yang berkelanjutan dengan dual-token model (AXS governance, SLP utility)",
+      "Mendiversifikasi Ronin menjadi appchain gaming multi-proyek (bukan hanya Axie Infinity)",
+      "Desentralisasi progresif governance melalui AXS DAO dan RON staking",
+      "Menjaga compliance regulasi sambil mempertahankan operasi global"
+    ],
+    "decisionPatterns": [
+      "Validator Set sebagai Strategic Alliance (Investor = Validator = Partner)",
+      "Guild Scholarship Model untuk User Acquisition Massal di Emerging Markets",
+      "Ecosystem Fund untuk Attract Third-Party Game Migration ke Ronin",
+      "Integrasi Enterprise Infrastructure (Google Cloud) untuk Legitimasi & Reliability",
+      "Selalu Membangun Infrastructure Sendiri (Not Invented Here) untuk Kontrol Penuh",
+      "Ekspansi Ekosistem Pasca-Funding Besar (Series B → Ronin Ecosystem Fund → Game Migration)",
+      "Upgrade Konsensus Pasca-Kritis Keamanan/Sentralisasi (PoA→DPoS Pasca-Exploit)",
+      "Partner Enterprise untuk Legitimasi (Google Cloud, Binance, Animoca) — Bukan Hanya Crypto-Native",
+      "Build Sovereign Infrastructure (Appchain) Alih-alih Bergantung L2 Pihak Ketiga",
+      "Upgrade Bertahap dengan Pengujian Ekstensif & Audit Berkala",
+      "Server-Authoritative Game Logic dengan On-Chain State Settlement",
+      "Canonical Bridge Lock/Mint dengan Threshold Signature — Tidak General Message Passing",
+      "Off-Chain Signaling (Snapshot) → On-Chain Execution (Timelock Multisig) untuk AXS Governance",
+      "Delegasi Voting Power ke Delegate (Bukan Direct Voting Saja)",
+      "RON Governance Belum Fully Live (Planned/Partial) — Validator Governance Implisit via Stake",
+      "Treasury Spending Via Proposal — Grant, Bounty, Emergency, Parameter Changes",
+      "Fundraising Besar Awal (Series B $152M) untuk Runway Jangka Panjang Tanpa Ronda Lanjutan",
+      "Protocol Revenue Diversification via Stack Vertikal (Marketplace + DEX + Bridge + Naming)",
+      "Treasury Bercabang — DAO Treasury Transparan On-Chain + Operational Treasury Sky Mavis Private",
+      "Fair Launch SLP + No Buyback Program untuk Semua Token"
+    ],
+    "riskResponse": [
+      "Emergency Centralized Intervention Lalu Desentralisasi Bertahap (Ronin Bridge Exploit)",
+      "Cost Cutting & Refokus ke Core Product Saat Bear Market (Layoffs 2022)",
+      "Compliance Engagement Tanpa Menghentikan Operasi (Regulatory Response)",
+      "Technical Upgrade Sebagai Respons Keamanan (Post-Exploit Architecture Hardening)"
+    ],
+    "tradeOffs": []
+  },
+  "Blur": {
+    "projectSlug": "blur",
+    "strategicObjectives": [],
+    "decisionPatterns": [
+      "Proxy Upgradeable Contracts dengan Multisig Admin Control",
+      "Dual Audit untuk Produk Baru (Blend) tapi Tidak untuk Core Marketplace",
+      "Ethereum L1 Only, No L2/Multi-Chain Deployment",
+      "VC-Funded Growth dengan Token Allocation untuk Investor",
+      "Zero Platform Fee → Fee Switch Monetization Via Governance",
+      "Seasonal Incentive Programs (Season 1-3) sebagai Customer Acquisition Cost",
+      "Treasury Opasitas — Tidak Ada Transparency Report Real-Time",
+      "Deep Integration dengan Ethereum Base Layer & Minimal External Protocol Dependencies",
+      "CEX-First Token Distribution (Binance, Coinbase Same-Day TGE)",
+      "Standard Wallet Compatibility, No Proprietary Wallet/SDK",
+      "Security Audit Partnerships sebagai Trust Signal (Blend Only)",
+      "Launch Fast, Iterate Via Proxy Upgrades, Audit Later (New Products Only)",
+      "Incentive Seasons sebagai Growth Lever, Lalu Stop & Monetize",
+      "Off-Chain Signaling (Snapshot) + On-Chain Multisig Execution",
+      "Fee Switch Activation Via Governance Proposal (Value Accrual Decision)",
+      "Seasonal Incentive Parameters Set by Team, Not DAO Vote (Initially)",
+      "Multisig Ownership Retention Despite DAO Formation"
+    ],
+    "riskResponse": [
+      "Proactive Dual Audit untuk Blend (Pre-Launch Risk Mitigation)",
+      "Fee Switch Activation sebagai Respons terhadap Revenue Uncertainty & Token Utility Criticism",
+      "Ethereum-Only Strategy sebagai Hedge Against Multi-Chain Fragmentation Risk",
+      "Unaudited Marketplace Contracts — Accepted Risk untuk Speed & Iteration"
+    ],
+    "tradeOffs": []
+  },
+  "Celestia": {
+    "projectSlug": "celestia",
+    "strategicObjectives": [
+      "Menjadi Data Availability Layer standar untuk modular blockchain stack",
+      "Memisahkan execution layer dari consensus layer untuk memungkinkan sovereign rollup dan app-chain",
+      "Membangun ekosistem rollup yang menggunakan Celestia DA melalui Blobstream dan verifikasi trust-minimized",
+      "Menciptakan value accrual untuk TIA melalui blobspace fees, staking, dan fee switch mekanisme",
+      "Desentralisasi progresif melalui Celestia Foundation (non-profit) dan governance on-chain",
+      "Memperluas akses light client trust-minimized ke browser dan mobile untuk mass adoption"
+    ],
+    "decisionPatterns": [],
+    "riskResponse": [],
+    "tradeOffs": []
+  },
+  "Aptos": {
+    "projectSlug": "aptos",
+    "strategicObjectives": [],
+    "decisionPatterns": [
+      "Parallel Execution via Block-STM sebagai Core Differentiator",
+      "Move VM & Resource-Oriented Programming sebagai Security Foundation",
+      "AptosBFT Evolution (v1 → v3 → v4) dengan Instant Finality",
+      "Account Abstraction Native via Keyless (OIDC + ZKP) bukan EIP-4337 Style"
+    ],
+    "riskResponse": [],
+    "tradeOffs": []
+  },
+  "Ethena": {
+    "projectSlug": "ethena",
+    "strategicObjectives": [],
+    "decisionPatterns": [
+      "Aggressive Multi-chain Deployment Paralel (7 Chain dalam 3 Bulan)",
+      "Deep DeFi Stack Integration Batch (Lending + Yield Tokenization + Stableswap + Margin)",
+      "Strategic Investor = Operational Partner",
+      "Custody Partnership untuk Institutional Gateway",
+      "Incentive-driven Adoption via Seasonal Campaigns",
+      "Parallel Execution Across All Tracks (Tech, BD, Legal, Marketing)",
+      "Strategic Investor Selection untuk Operational Synergy",
+      "Governance-first Token Launch (DAO Active at TGE)",
+      "Composability-first Product Design (sUSDe sebagai Primitive)",
+      "Off-chain Voting (Snapshot) + On-chain Execution (Timelock)",
+      "Progressive Parameter Control via DAO",
+      "Community Incentive Allocation via Governance",
+      "Delegation-enabled Voting Power",
+      "Hybrid Off-chain Hedging + On-chain Settlement",
+      "LayerZero OFT untuk EVM Cross-chain, Wormhole untuk Non-EVM",
+      "Chainlink Oracle untuk Semua Pricing & Risk Data",
+      "UUPS Upgradeable Contracts dengan Timelock Governance",
+      "Triple Audit Strategy (Core, Cross-chain, Governance)",
+      "ERC-4626 Vault Standard untuk sUSDe (Non-rebasing)",
+      "Single Series A Strategic Raise dengan Investor-Operator Alignment",
+      "Protocol Revenue dari Funding Rate (No Token Inflation)",
+      "Treasury Opacity (No Transparency Report)",
+      "Insurance Fund sebagai Risk Buffer On-chain",
+      "Ecosystem Allocation untuk Liquidity Seeding & Incentives"
+    ],
+    "riskResponse": [
+      "Insurance Fund untuk Negative Funding Rate Event",
+      "Multi-audit + Bug Bounty (Planned) untuk Security Risk",
+      "Diversified Hedging Venues (Multi-CEX + DEX) untuk Counterparty Risk",
+      "Emergency Pause via Multisig untuk Critical Failure",
+      "Cross-chain Risk Mitigation via Auditor Specialization"
+    ],
+    "tradeOffs": []
+  },
+  "MegaETH": {
+    "projectSlug": "megaeth",
+    "strategicObjectives": [
+      "Membangun Layer 2 Ethereum \"Real-time\" dengan Eksekusi Kustom Berperforma Tinggi",
+      "Memanfaatkan OP Stack sebagai Fondasi Modular untuk Mempercepat Time-to-Market",
+      "Mengintegrasikan EigenLayer (EigenDA & Restaking) untuk Skalabilitas DA dan Keamanan Ekonomi",
+      "Menarik Investor Tier-1 (DragonFly, Figment) untuk Validasi dan Dana Operasional",
+      "Meluncurkan Public Testnet untuk Validasi Performa dan Onboarding Developer",
+      "Menjaga Kompatibilitas EVM Penuh untuk Memudahkan Migrasi Aplikasi Ethereum"
+    ],
+    "decisionPatterns": [
+      "Deep OP Stack Alignment (Superchain-Compatible Architecture)",
+      "EigenLayer Integration sebagai Strategic Differentiator",
+      "First-Party Infrastructure Only (No Third-Party Apps)",
+      "Generic EVM Wallet Compatibility (No Deep Integration)",
+      "Figment sebagai Infrastructure Partner Strategic",
+      "Narrative-First, Technical-Detail-Later",
+      "Closed Core, Open Periphery",
+      "Investor Signaling tanpa Financial Transparency",
+      "Testnet sebagai Marketing Tool, bukan Incentivized Network",
+      "Dependency Announcement tanpa Technical Specification",
+      "Founder-Controlled Decision Making (No Formal Governance)",
+      "OP Stack Default Governance Parameters (Implicit Security Council)",
+      "Token Governance Planned but Undefined",
+      "Centralized Sequencer Governance (Single Operator Control)",
+      "No Community Incentive Mechanism (Testnet)",
+      "Modular Architecture Adoption (OP Stack)",
+      "Custom Execution Environment untuk Differentiation",
+      "Centralized Sequencer untuk Speed-to-Market",
+      "Ethereum Blob (EIP-4844) sebagai DA Primer dengan EigenDA Planned",
+      "Permissioned Fault Proof (OP Stack Default) untuk Early Stage",
+      "Zero Audit Transparency untuk Custom Components",
+      "Single VC Round dengan Investor Tier-1 Tanpa Disclosure Jumlah",
+      "Zero Revenue Operations Selama Testnet Phase",
+      "Treasury Opacity Total",
+      "Token Warrant/SAFE Assumption untuk Investor",
+      "Pre-TGE Strategy dengan Fleksibilitas Tokenomics Penuh"
+    ],
+    "riskResponse": [
+      "Technical Risk Mitigation via Upstream Dependency (OP Stack)",
+      "Centralization Risk Acceptance untuk Speed (Sequencer)",
+      "Transparency Risk Mitigation via Selective Disclosure",
+      "EigenLayer Integration Execution Risk (Planned Dependency)",
+      "Regulatory Risk Avoidance via Jurisdiction Opacity"
+    ],
+    "tradeOffs": [
+      "Desentralisasi vs Speed-to-Market (Sequencer)",
+      "Transparansi Keamanan vs Keunggulan Kompetitif (Execution Client)",
+      "EigenLayer Dependency vs Sovereign DA Control",
+      "Token Launch Delay vs Regulatory/Legal Flexibility",
+      "OP Stack Alignment vs Customization Freedom",
+      "First-Party Infrastructure Control vs Ecosystem Decentralization"
+    ]
+  },
+  "Lido": {
+    "projectSlug": "lido",
+    "strategicObjectives": [
+      "Menjadi infrastruktur liquid staking dominan untuk Ethereum dan ekosistem L2",
+      "Membangun DAO yang berkelanjutan dengan treasury mandiri dan governance efektif",
+      "Menjaga keamanan protokol melalui audit berulang, bug bounty, dan upgrade bertahap",
+      "Mengintegrasikan stETH/wstETH sebagai \"money lego\" fundamental di DeFi Ethereum dan L2",
+      "Desentralisasi progresif node operator set melalui Staking Router modules"
+    ],
+    "decisionPatterns": [
+      "Deep Integration dengan DeFi Primitif (Curve, Aave, Maker) — Membuat stETH/wstETH \"Base Layer\"",
+      "L2 Expansion via Canonical Bridge wstETH — Bukan Deploy Staking Contracts Baru",
+      "EigenLayer Integration sebagai LRT Provider — Leveraging Existing wstETH Distribution",
+      "Sunset Produk Non-Performing dengan Governance Vote dan Redemption Window",
+      "Node Operator Diversification via DVT Modules — Menjawab Centralization Narrative",
+      "Ekspansi Pasca-Funding → Lalu Konsolidasi",
+      "Upgrade Mayor Selalu Melalui Governance Vote + Timelock + Multi-Audit",
+      "Integrasi DeFi Prioritaskan \"Big Three\" — Curve, Aave, Maker",
+      "Sunset Produk yang Tidak Menjangkau Product-Market Fit — Dengan Redemption Window",
+      "Menjawab Kritik Narasi dengan Solusi Teknis (Bukan Hanya Komunikasi)",
+      "Token-Weighted Voting (1 LDO = 1 Vote) dengan Dual-Lane Snapshot + Aragon",
+      "Multisig 5-of-9 Execution — Investor Reps + Core Contributors + Operator Reps",
+      "LIP (Lido Improvement Proposal) Process — Forum Discussion → Snapshot → On-chain",
+      "Governance Mengontrol Parameter Ekonomis (Fee Switch, Operator Fee, Withdrawal Fee)",
+      "Legal Structure Review Ongoing — Adaptive Compliance",
+      "Ethereum Alignment First — Semua Keputusan Teknis Mengutamakan Ethereum Mainnet dan Roadmap-nya",
+      "Upgrade Bertahap dengan Pengujian Ekstensif dan Audit Multi-party",
+      "Modular Architecture untuk Fleksibilitas Tanpa Upgrade Kontrak Inti",
+      "Canonical Bridges Only untuk L2 Expansion — No Custom Bridge Contracts",
+      "Oracle Committee Multi-sig (5-of-9) untuk Beacon Chain Reporting — Trust Minimized tapi Bukan Trustless",
+      "Pendanaan Bertahap dengan Valuasi Meningkat — Internal Bootstrap → Series A → Series B → Protocol Revenue",
+      "Treasury Management — Legal Wrapper (Cayman Foundation) + Multisig 5-of-9 + Diversified Assets",
+      "Grant Program dan Core Contributor Budget — Funded dari Treasury, Dikelola via Governance",
+      "Token Distribution — Treasury Dominan (36.3%), Investor Vesting Long-term, Community via Liquidity Mining",
+      "Fee Switch sebagai Mekanisme Revenue Sustainable — Governance-Controlled Parameter"
+    ],
+    "riskResponse": [
+      "FTX/Alameda Contagion (2022-11) — Transparansi On-chain + Peg Stability Maintained",
+      "Centralization Criticism (~28.5% ETH Staked) — Structural Response via V2 Staking Router + DVT Modules",
+      "Smart Contract Risk — Multi-Audit + Bug Bounty + Proxy Upgrade Timelock",
+      "Regulatory Uncertainty (MiCA, SEC) — Legal Structure Review + Foundation Wrapper",
+      "Slashing Risk — No Socialization, Transparent Disclosure, DVT Mitigation"
+    ],
+    "tradeOffs": [
+      "Desentralisasi vs Keamanan/Efisiensi Operator",
+      "Rebasin Token (stETH) vs DeFi Composability → Wrapper (wstETH) sebagai Solusi",
+      "Multi-chain Broad vs Focus Ethereum + L2",
+      "Fee Revenue vs StETH Yield Competitiveness",
+      "Legal Wrapper (Cayman Foundation) vs Full Desentralisasi \"Code is Law\""
+    ]
+  }
+}

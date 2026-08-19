@@ -1,0 +1,83 @@
+openapi: 3.0.3
+info:
+  title: CIF Forensic Intelligence API
+  version: 1.0.0
+  description: |
+    Enterprise API surface. Programmatic access via `x-cif-key` header
+    (sha256-stored keys, scope `read`). User endpoints use HMAC session cookies;
+    RBAC viewer/analyst/admin. See docs/API.md & docs/GOOGLE-OAUTH.md.
+servers:
+  - url: https://cif.example.com
+security:
+  - apiKey: []
+  - sessionCookie: []
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: x-cif-key
+    sessionCookie:
+      type: apiKey
+      in: cookie
+      name: cif_session
+paths:
+  /api/v1/projects:
+    get:
+      summary: Catalog (limit≤100)
+      parameters: [{ name: limit, in: query, schema: { type: integer, default: 50 } }]
+      responses:
+        "200": { description: projects[] }
+        "401": { description: invalid key }
+  /api/v1/projects/{slug}:
+    get:
+      summary: Structured dossier (DE, knowledge+citations, conflicts, QA)
+      parameters: [{ name: slug, in: path, required: true, schema: { type: string } }]
+      responses:
+        "200": { description: dossier }
+        "401": { description: invalid key }
+        "404": { description: not found }
+  /api/v1/patterns:
+    get:
+      summary: Locked 16-pattern registry (triggers/instances/confidence/scope)
+      responses:
+        "200": { description: patterns[] }
+        "401": { description: invalid key }
+  /api/auth/login:
+    post:
+      summary: Email+password login (scrypt) → session cookie
+      security: []
+      responses:
+        "200": { description: user }
+        "401": { description: invalid credentials }
+  /api/auth/google:
+    get:
+      summary: Start Sign-in-with-Google (OAuth2 PKCE)
+      security: []
+      responses:
+        "307": { description: redirect to Google }
+  /api/search:
+    get:
+      summary: Global typeahead (projects/patterns/entities/narratives/DE)
+      security: []
+      parameters: [{ name: q, in: query, required: true, schema: { type: string } }]
+      responses:
+        "200": { description: results[] }
+  /api/calibration:
+    get:
+      summary: Public track record + calibration score
+      security: []
+      responses:
+        "200": { description: calls[] + calibrationScore }
+    post:
+      summary: Publish falsifiable Current Read (analyst+)
+      responses:
+        "201": { description: call }
+        "401": { description: unauthorized }
+        "403": { description: forbidden }
+  /api/health:
+    get:
+      summary: Ops probe (persistence, supabase, scheduler)
+      security: []
+      responses:
+        "200": { description: status }

@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* INTENT brand: Deep Obsidian canvas, Truth Gold primary, Teal evidence */
+    --background: 210 22% 5%;      /* #0B0E11 */
+    --foreground: 0 0% 100%;
+    --card: 215 21% 11%;           /* #161B22 */
+    --card-foreground: 0 0% 100%;
+    --popover: 215 21% 12%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 38 92% 50%;         /* #F59E0B Truth Gold */
+    --primary-foreground: 210 22% 5%;
+    --secondary: 215 20% 14%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 215 20% 13%;
+    --muted-foreground: 211 10% 58%; /* #8B949E Ash Gray */
+    --accent: 174 62% 52%;         /* #2DD4BF Electric Teal */
+    --accent-foreground: 210 22% 5%;
+    --destructive: 347 77% 60%;    /* #FB7185 Rose */
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 18% 17%;
+    --input: 215 18% 19%;
+    --ring: 38 92% 50%;
+    --radius: 0.75rem;             /* card 12px per brand package */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-intent-bg text-intent-text antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    letter-spacing: -0.011em;
+  }
+  ::selection {
+    background: rgba(245, 158, 11, 0.35);
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #223041;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2d405a;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Layered ambient: radial gold/teal glows + fine grid + vignette */
+  .grid-bg {
+    background-image: radial-gradient(1100px 480px at 85% -10%, rgba(245, 158, 11, 0.1), transparent 60%),
+      radial-gradient(900px 420px at -10% 8%, rgba(45, 212, 191, 0.06), transparent 55%),
+      linear-gradient(rgba(139, 148, 158, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139, 148, 158, 0.05) 1px, transparent 1px);
+    background-size: auto, auto, 36px 36px, 36px 36px;
+  }
+  .panel {
+    @apply rounded-xl border border-white/[0.06] bg-intent-surface/90 backdrop-blur-md;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.04);
+  }
+  .panel-hover {
+    @apply transition-all duration-200 hover:-translate-y-px hover:border-intent-gold/40;
+  }
+  .mono {
+    font-family: var(--font-mono), "JetBrains Mono", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  .eyebrow {
+    @apply mono text-[10px] font-semibold uppercase tracking-[0.14em] text-intent-muted;
+  }
+  .data-num {
+    @apply mono tracking-tight;
+    font-variant-numeric: tabular-nums;
+  }
+  .gradient-text {
+    background: linear-gradient(92deg, #ffffff 15%, #f59e0b 60%, #2dd4bf 115%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* md-editor theming inside our dark surface */
+.w-md-editor {
+  --color-canvas-default: transparent !important;
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+.w-md-editor-toolbar {
+  background: rgba(22, 27, 34, 0.85) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+.w-md-editor-toolbar li > button {
+  color: #8b949e !important;
+}
+.w-md-editor-toolbar li.active > button,
+.w-md-editor-toolbar li > button:hover {
+  color: #f59e0b !important;
+}
+.w-md-editor-text-pre,
+.w-md-editor-text-input,
+.w-md-editor-text-pre .token {
+  color: #ffffff !important;
+}
+.w-md-editor-preview {
+  border-left: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+.wmde-markdown {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+.wmde-markdown table {
+  display: table;
+}
+[data-color-mode="dark"] .wmde-markdown hr {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* React Flow dark chrome */
+.react-flow__attribution {
+  background: transparent !important;
+}
+.react-flow__node {
+  font-family: inherit;
+}
+
+/* ── INTENT coded logo loader ─────────────────────────────────────────── */
+.loader-diamond {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.55));
+  animation: loader-dash 1.8s ease-in-out infinite;
+}
+@keyframes loader-dash {
+  0% { stroke-dashoffset: 200; opacity: 1; }
+  55% { stroke-dashoffset: 0; opacity: 1; }
+  80% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0.15; }
+}
+.loader-bar {
+  animation: loader-bar 1.8s ease-in-out infinite;
+}
+@keyframes loader-bar {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 1; }
+}
+.loader-orbit {
+  transform-origin: 36px 36px;
+  animation: loader-orbit 2.6s linear infinite;
+}
+@keyframes loader-orbit {
+  to { transform: rotate(360deg); }
+}

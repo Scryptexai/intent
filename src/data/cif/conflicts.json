@@ -1,0 +1,115 @@
+{
+  "Arbitrum": [
+    {
+      "id": "C-001",
+      "projectSlug": "arbitrum",
+      "category": "Financial",
+      "title": "Treasury Size ($1.21B vs $1.3B+)",
+      "description": "Messari melaporkan $1.21B (per 31 Mei 2025), sementara KuCoin melaporkan $1.3B+. Perbedaan ~$90M (7%).",
+      "severity": "Medium",
+      "status": "Unresolved",
+      "versionA": {
+        "source": "Messari",
+        "value": "$1.21B",
+        "date": "2025-05-31",
+        "url": "https://messari.io/",
+        "evidence": "Treasury size, reported as of 31 May 2025"
+      },
+      "versionB": {
+        "source": "KuCoin",
+        "value": "$1.3B+",
+        "date": "",
+        "url": "https://www.kucoin.com/",
+        "evidence": "More recent data than Messari's; exact capture date not stated"
+      },
+      "resolution": "Perbedaan disebabkan oleh waktu pengambilan data dan metodologi. Messari per 31 Mei 2025; KuCoin data lebih baru. Tidak resolved.",
+      "affectedKnowledge": [
+        "K-002"
+      ],
+      "affectedPhase": "Phase 5"
+    },
+    {
+      "id": "C-004",
+      "projectSlug": "arbitrum",
+      "category": "Market",
+      "title": "Daily Transactions (4.7M vs 1.5M)",
+      "description": "KuCoin melaporkan 4.7M daily transactions (Feb 2026), sementara Blockeden melaporkan 1.5M.",
+      "severity": "High",
+      "status": "Unresolved",
+      "versionA": {
+        "source": "KuCoin",
+        "value": "4.7M daily transactions",
+        "date": "2026-02",
+        "url": "https://www.kucoin.com/",
+        "evidence": ""
+      },
+      "versionB": {
+        "source": "Blockeden",
+        "value": "1.5M daily transactions",
+        "date": "",
+        "url": "https://blockeden.xyz/",
+        "evidence": ""
+      },
+      "resolution": "Perbedaan karena periode waktu berbeda atau metodologi berbeda. Tidak resolved.",
+      "affectedKnowledge": [],
+      "affectedPhase": "Phase 8"
+    },
+    {
+      "id": "C-008",
+      "projectSlug": "arbitrum",
+      "category": "Token",
+      "title": "Distribution Percentages (42.78% vs 35.3% DAO)",
+      "description": "The Block: 42.78% DAO Treasury; KuCoin: 35.3% DAO.",
+      "severity": "High",
+      "status": "Unresolved",
+      "versionA": {
+        "source": "The Block",
+        "value": "42.78% DAO Treasury",
+        "date": "",
+        "url": "https://www.theblock.co/",
+        "evidence": ""
+      },
+      "versionB": {
+        "source": "KuCoin",
+        "value": "35.3% DAO",
+        "date": "",
+        "url": "https://www.kucoin.com/",
+        "evidence": ""
+      },
+      "resolution": "Perbedaan karena kategorisasi yang berbeda (DAO Treasury vs Foundation operational budget). Tidak resolved.",
+      "affectedKnowledge": [
+        "K-010"
+      ],
+      "affectedPhase": "Phase 6"
+    },
+    {
+      "id": "C-009",
+      "projectSlug": "arbitrum",
+      "category": "Governance",
+      "title": "Voting Power Concentration (Top 10 ~50% vs ~85%)",
+      "description": "Beberapa sumber menyebut top 10 addresses ~50%, sumber lain menyebut top 100 hold 60-85%.",
+      "severity": "High",
+      "status": "Unresolved",
+      "versionA": {
+        "source": "Phase 6 — Holder Distribution",
+        "value": "Top 10 addresses ~50%",
+        "date": "",
+        "url": "",
+        "evidence": "Internal dataset"
+      },
+      "versionB": {
+        "source": "Phase 9 — Governance Decision Pattern",
+        "value": "Top 100 hold 60-85%",
+        "date": "",
+        "url": "",
+        "evidence": "Internal dataset"
+      },
+      "resolution": "Perbedaan karena cakupan analisis (top 10 vs top 100). Tidak resolved.",
+      "affectedKnowledge": [
+        "K-004",
+        "K-005"
+      ],
+      "affectedPhase": "Phase 6"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+import type { DictKey } from "./en";
+
+export const zh: Partial<Record<DictKey, string>> = {
+  "nav.studio": "内容工作室",
+  "topbar.search": "搜索项目、模式、执行操作…",
+  "topbar.signin": "登录",
+  "common.skip": "跳到内容",
+  "common.loadmore": "加载更多",
+  "sentinel.sub": "跨监控宇宙的异常检测 · 阈值 ±2σ（对比30日均线）· 每6小时扫描 · 界面每小时刷新",
+  "origin.sub": "行为者可信度与叙事真相矩阵——谁在发言、其利益所在、以及叙事超出证据的程度。",
+  "studio.title": "内容工作室",
+  "studio.sub": "原始数据输入 → 输出有证据支撑的病毒式内容。AI 流式生成，由您编辑。",
+  "studio.data": "数据预览",
+  "studio.editor": "草稿编辑器",
+  "pricing.title": "定价",
+  "pricing.sub": "计量的是范围与连续性——信任深度永不收费。引用与证据永久免费。",
+  "pricing.trial": "新账户免费获赠 1 个月 Pro。",
+  "pricing.month": "/月",
+  "pricing.kyc": "无需KYC——检测到付款即自动解锁 Pro。",
+  "billing.title": "账单",
+  "billing.trialEnds": "试用结束",
+  "billing.method.stripe": "银行卡 (Stripe)",
+  "billing.method.paypal": "PayPal",
+  "billing.method.crypto": "USDT · 加密",
+};

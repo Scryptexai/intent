@@ -1,0 +1,279 @@
+[
+  {
+    "n": "LayerZero",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/LayerZero.md",
+    "cat": "Interoperability / Omnichain Messaging (Bridge, GMP, DVN security)",
+    "era": "2021–",
+    "tags": [
+      "bridge"
+    ]
+  },
+  {
+    "n": "Arbitrum",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Arbitrum.md",
+    "cat": "Layer-2 scaling solution (Optimistic Rollup)",
+    "era": "2018–",
+    "tags": [
+      "l2"
+    ]
+  },
+  {
+    "n": "Aave",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Aave.md",
+    "cat": "DeFi lending (money market)",
+    "era": "2017–",
+    "tags": [
+      "defi"
+    ]
+  },
+  {
+    "n": "Avalanche",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Avalanche.md",
+    "cat": "Layer-1 (heterogeneous multi-chain/Subnet)",
+    "era": "2020–",
+    "tags": [
+      "l1"
+    ]
+  },
+  {
+    "n": "Bancor",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Bancor.md",
+    "cat": "DeFi AMM (single-sided staking, IL protection)",
+    "era": "2017–",
+    "tags": [
+      "defi",
+      "amm"
+    ]
+  },
+  {
+    "n": "Blur",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Blur.md",
+    "cat": "NFT marketplace + lending (Blend)",
+    "era": "2022–",
+    "tags": [
+      "nft-community"
+    ]
+  },
+  {
+    "n": "Aptos",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Aptos.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "testnet-incentive",
+      "l1"
+    ]
+  },
+  {
+    "n": "Axie Infinity",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Axie Infinity.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "nft-community",
+      "governance"
+    ]
+  },
+  {
+    "n": "Blast",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Blast.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "points",
+      "l2"
+    ]
+  },
+  {
+    "n": "Cardano",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Cardano.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "l1"
+    ]
+  },
+  {
+    "n": "Celestia",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Celestia.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "modular"
+    ]
+  },
+  {
+    "n": "Compound",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Compound.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "governance"
+    ]
+  },
+  {
+    "n": "EOS",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/EOS.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "l1"
+    ]
+  },
+  {
+    "n": "Ethena",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Ethena.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "stablecoin",
+      "synthetic"
+    ]
+  },
+  {
+    "n": "Friend.tech",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Friend.tech.md",
+    "cat": "",
+    "era": "",
+    "tags": []
+  },
+  {
+    "n": "Grass",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Grass.md",
+    "cat": "",
+    "era": "",
+    "tags": []
+  },
+  {
+    "n": "Helium",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Helium.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "depin"
+    ]
+  },
+  {
+    "n": "Hyperliquid",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Hyperliquid.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "perps",
+      "l1"
+    ]
+  },
+  {
+    "n": "Irys",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Irys.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "testnet-incentive",
+      "l1"
+    ]
+  },
+  {
+    "n": "Jito",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Jito.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "airdrop",
+      "liquid-staking",
+      "governance"
+    ]
+  },
+  {
+    "n": "Kamino",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Kamino.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "points"
+    ]
+  },
+  {
+    "n": "Lido",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Lido.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "liquid-staking",
+      "oracle",
+      "governance"
+    ]
+  },
+  {
+    "n": "MakerDAO",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/MakerDAO.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "stablecoin",
+      "governance"
+    ]
+  },
+  {
+    "n": "MegaETH",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/MegaETH.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "l2"
+    ]
+  },
+  {
+    "n": "Monad",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Monad.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "l1"
+    ]
+  },
+  {
+    "n": "Movement Labs",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Movement Labs.md",
+    "cat": "",
+    "era": "",
+    "tags": [
+      "modular",
+      "l2"
+    ]
+  },
+  {
+    "n": "Notcoin",
+    "tier": "Deep",
+    "file": "examples/CaseStudies/Notcoin.md",
+    "cat": "",
+    "era": "",
+    "tags": []
+  }
+]

@@ -1,0 +1,33 @@
+<svg width="1600" height="950" viewBox="0 0 1600 950" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="950" fill="#05080C"/>
+  <g stroke="#F59E0B" stroke-opacity="0.05" stroke-width="1">
+    <path d="M0 95h1600M0 190h1600M0 285h1600M0 380h1600M0 475h1600M0 570h1600M0 665h1600M0 760h1600M0 855h1600"/>
+    <path d="M100 0v950M200 0v950M300 0v950M400 0v950M500 0v950M600 0v950M700 0v950M800 0v950M900 0v950M1000 0v950M1100 0v950M1200 0v950M1300 0v950M1400 0v950M1500 0v950"/>
+  </g>
+  <circle cx="800" cy="475" r="430" stroke="#F59E0B" stroke-opacity="0.18" fill="none"/>
+  <circle cx="800" cy="475" r="330" stroke="#F59E0B" stroke-opacity="0.12" stroke-dasharray="4 6" fill="none"/>
+  <g fill="#F59E0B">
+    <circle cx="290" cy="455" r="3" fill-opacity="0.7"/><circle cx="1355" cy="515" r="3" fill-opacity="0.7"/>
+    <circle cx="375" cy="135" r="2.5" fill-opacity="0.5"/><circle cx="1225" cy="830" r="2.5" fill-opacity="0.5"/>
+    <circle cx="615" cy="830" r="2.5" fill-opacity="0.6"/><circle cx="1355" cy="155" r="2.5" fill-opacity="0.5"/>
+    <circle cx="255" cy="780" r="2.5" fill-opacity="0.4"/><circle cx="1465" cy="480" r="2.5" fill-opacity="0.4"/>
+  </g>
+  <g font-family="'JetBrains Mono', monospace" font-size="13" letter-spacing="2" fill="#F59E0B" fill-opacity="0.75">
+    <text x="140" y="185">SIGNAL DETECTION</text>
+    <text x="1245" y="205">BEHAVIOR ANALYSIS</text>
+    <text x="120" y="590">PATTERN RECOGNITION</text>
+    <text x="1245" y="745">THREAT ASSESSMENT</text>
+  </g>
+  <g stroke="#F59E0B" stroke-opacity="0.5">
+    <path d="M140 195h115M1245 215h115M120 600h135M1245 755h115"/>
+  </g>
+  <g fill="none" stroke="#F59E0B"><rect x="252" y="190" width="7" height="7"/><rect x="1357" y="210" width="7" height="7"/><rect x="252" y="595" width="7" height="7"/><rect x="1357" y="750" width="7" height="7"/></g>
+  <g transform="translate(660,270) scale(0.55)">
+    <path d="M256 72 L440 256 L256 440 L72 256 Z" stroke="#F59E0B" stroke-width="44" fill="none"/>
+    <rect x="10" y="236" width="226" height="44" fill="#F59E0B"/>
+    <rect x="276" y="236" width="226" height="44" fill="#F59E0B"/>
+  </g>
+  <text x="800" y="545" text-anchor="middle" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="64" letter-spacing="26" fill="#FFFFFF">INTENT</text>
+  <g fill="#F59E0B"><circle cx="770" cy="640" r="7"/><circle cx="800" cy="640" r="7"/><circle cx="830" cy="640" r="7"/></g>
+  <text x="800" y="705" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="22" letter-spacing="3" fill="#C9D1D9">Loading intelligence...</text>
+</svg>

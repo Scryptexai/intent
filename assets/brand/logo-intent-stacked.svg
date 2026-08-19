@@ -1,0 +1,10 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1080" height="1080" fill="#05080C"/>
+  <g transform="translate(290,150) scale(0.976)">
+    <path d="M256 72 L440 256 L256 440 L72 256 Z" stroke="#F59E0B" stroke-width="40" fill="none"/>
+    <rect x="10" y="236" width="226" height="40" fill="#F59E0B"/>
+    <rect x="276" y="236" width="226" height="40" fill="#F59E0B"/>
+  </g>
+  <text x="540" y="780" text-anchor="middle" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="120" letter-spacing="42" fill="#FFFFFF">INTENT</text>
+  <text x="540" y="850" text-anchor="middle" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="34" letter-spacing="8" fill="#E6EDF3">Know the Intent. See the Signal.</text>
+</svg>
